@@ -1,5 +1,6 @@
 # Importing necessary Libraries:
 from flask import Flask, render_template, request
+import ezgmail
 
 # Creating an instance of Flask class
 app = Flask(__name__, template_folder='templates')   
@@ -12,7 +13,11 @@ def home():
 # Creating the Contact Us page:
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    if request.method == 'GET':
+        return render_template('contact.html')
+    else:
+        ezgmail.send('archismansengupta2403@gmail.com', 'Test Subject', 'This is just a sample text.')
+
 
 # Creating the Projects page:
 @app.route('/projects', methods=['GET', 'POST'])

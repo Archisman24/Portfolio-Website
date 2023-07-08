@@ -1,0 +1,71 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
+    
+    body {
+        background-image: url('static/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .my-text {
+        font-family: 'Inter', sans-serif;
+        color: black
+    }
+    .white-box {
+        border: 2px solid white;
+        padding: 130px calc((100vw - 100%) / 2);
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+    } 
+    
+    .center-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .center-image img {
+        max-width: 100%;
+        height: auto; 
+        max-height: 400px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.2s ease;
+    }
+    
+    .center-image img:hover {
+        box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.4);
+        transition-duration: 0.3s; 
+        transition-timing-function: ease-in-out; 
+    }
+    
+    .bottom-image {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);   
+    }
+    .gradient-button {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #4b5ff4, #ff6f8c);
+    color: black;
+    border: none;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .gradient-button:hover {
+    color: black;
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.5s; 
+    transition-timing-function: ease-in-out; 
+    }
+    
+    .navs{
+        font-family: 'Inter', sans-serif;
+    }
+    text1{
+        font-family: 'Montserrat', sans-serif;;
+    }
+</style>
