@@ -14,6 +14,11 @@ def home():
 def contact():
     return render_template('contact.html')
 
+# Creating the Projects page:
+@app.route('/projects', methods=['GET', 'POST'])
+def projects():
+    return render_template('projects.html')
+
 # Running the Flask App:
 if __name__ == '__main__':
     app.run( debug=True, port = 5000)

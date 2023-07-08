@@ -14,13 +14,9 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
-        [class*="container"] {
-            color:black
-        }
-        
         .my-text {
             font-family: 'Inter', sans-serif;
+            color: black
         }
         .white-box {
             border: 2px solid white;
@@ -28,7 +24,7 @@
             background-color: white;
             border-radius: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            position: relative; /* Add position relative */
+            position: relative;
         } 
         
         .center-image {
@@ -37,9 +33,18 @@
         }
         
         .center-image img {
-            max-width: 100%; /* Set the maximum width to fill its container */
-            height: auto; /* Automatically adjust the height */
-            max-height: 400px; /* Set the maximum height if needed */
+            max-width: 100%;
+            height: auto; 
+            max-height: 400px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .center-image img:hover {
+            box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.4);
+            transition-duration: 0.3s; 
+            transition-timing-function: ease-in-out; 
         }
         
         .bottom-image {
@@ -49,24 +54,30 @@
             transform: translateX(-50%);   
         }
         .gradient-button {
-        background: linear-gradient(to right, #3f5efb, #fc466b);
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(to right, #4b5ff4, #ff6f8c);
         color: black;
         border: none;
         transition: box-shadow 0.2s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .gradient-button:hover {
         color: black;
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        transition-duration: 0.5s; /* Adjust the duration */
-        transition-timing-function: ease-in-out; /* Adjust the timing function */
+        box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.4);
+        transition-duration: 0.5s; 
+        transition-timing-function: ease-in-out; 
         }
         
+        .navs{
+            color: whitesmoke;
+            font-family: 'Inter', sans-serif;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    {% include 'nav.html' %}
     <div class="container my-5 mx-auto white-box" style="color: darkslategray;">
         <div class="row">
             <div class="col-lg-1" style="width: 100px;">
@@ -77,16 +88,16 @@
                 <div class="row justify-content-left text align-content-center my-text " style="height:auto; font-size: 50px;">I AM ARCHISMAN SENGUPTA</div>
                 <p class="lead" style="border-bottom-width: 2px; padding-bottom: 5px; margin-bottom: 5px;">Mechanical Engineer, ML Enthusiast</p>
                 <a href="/contact">
-                    <button type="button" class="btn btn btn-danger btn-lg gradient-button" style="margin-top: 30px; font-size: 15px;">CONTACT ME</button>
+                    <button type="button" class="btn btn btn-danger btn-lg gradient-button" style="margin-top: 30px; font-size: 12px;">CONTACT ME</button>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 justify-content-center">
                 <div class="row my-5 center-image">
-                    <img src="static/Profile.png" alt="Profile" class="img-fluid shift-right" style="margin-left: 50px;">
+                    <img src="static/avatar.png" alt="Avatar" class="img-fluid shift-right" style="margin-left: 20px;">
                 </div>
             </div>
         </div>
-        <img src="static/Initials.png" alt="Initials" class="img-fluid bottom-image" width="60" height="60">
+        <img src="static/Initials.png" alt="Initials" class="img-fluid bottom-image" width="60" height="60" style="margin-top: 20px;">
             
     </div>
     
