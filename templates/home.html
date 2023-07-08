@@ -11,27 +11,27 @@
 </head>
 <body>
     {% include 'nav.html' %}
-    <div class="container my-5 mx-auto white-box" style="color: darkslategray;">
+    <div class="container my-5 mx-auto white-box" style="color: darkslategray;  max-height: 600px;">
         <div class="row">
-            <div class="col-lg-1" style="width: 110px; padding-left: 40px;">
+            <div class="col-lg-1" style="width: 110px; padding-left: 42px;">
                 <div class="row ">
                     <a href="https://www.linkedin.com/in/archismansengupta2403/" target="_blank">
-                        <img src="static\linkedin.svg" style="height: 22px; margin-top: -70px; ">
+                        <img src="static\linkedin.svg" style="height: 22px; margin-top: 60px; ">
                     </a>
                 </div>
                 <div class="row">
                     <a href="https://github.com/Archisman24" target="_blank">
-                        <img src="static\github.svg" style="height: 22px; margin-top: -34px;">
+                        <img src="static\github.svg" style="height: 22px; margin-top: 20px;">
                     </a>
                 </div>
                 <div class="row ">
                     <a href="https://www.kaggle.com/archisman24" target="_blank">
-                        <img src="static\kaggle.svg" style="height: 22px; ">
+                        <img src="static\kaggle.svg" style="height: 22px; margin-top: 20px;">
                     </a>
                 </div>
             </div>
             <div class="col-lg-8 col-md-6" style="width: 800px;">
-                <div class="row justify-content-left text align-content-end my-text" style="height: 150px; font-size: 20px;">HI THERE!</div>
+                <div class="row justify-content-left text align-content-end my-text" style="height: 80px; font-size: 20px;">HI THERE!</div>
                 <div class="row justify-content-left text align-content-center my-text " style="height:auto; font-size: 50px;">I AM ARCHISMAN SENGUPTA</div>
                 <p class="lead" style="border-bottom-width: 2px; padding-bottom: 5px; margin-bottom: 5px;">Mechanical Engineer, ML Enthusiast</p>
                 <a href="/contact">
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 justify-content-center">
-                <div class="row my-5 center-image">
+                <div class="row my-1 center-image">
                     <img src="static/avatar.png" alt="Avatar" class="img-fluid shift-right" style="margin-left: 20px;">
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <img src="static/Initials.png" alt="Initials" class="img-fluid bottom-image" width="60" height="60" style="margin-top: 20px;">
             
     </div>
-    
+    {%include 'footer.html'%}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
