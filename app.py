@@ -22,7 +22,7 @@ def contact():
             recruiter = 'He is a Recruiter.'
         else:
             recruiter = 'He is not a Recruiter.'
-            message = f"{name} has shown interest in your website.'\n\n{recruiter}. \n\n Message : {request.form.get('query')}"
+            message = f"{name} has shown interest in your website.\n\n{recruiter}. \n\n Message : {request.form.get('query')}"
 
         ezgmail.send('archismansengupta02@gmail.com', "Notification from Portfolio website", message)
 
