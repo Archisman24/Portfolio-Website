@@ -19,6 +19,16 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         position: relative;
     } 
+
+    .white-box2 {
+        border: 2px solid white;
+        padding: 8%;
+        background-color: white;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+    } 
+    
     
     .center-image {
         display: flex;
@@ -99,11 +109,42 @@
             position: relative;
             z-index: 1;
         }
-        .btn-success.submitted {
-            background-color: green;
-        }
-        .btn-success.submitted1 {
-            background-color: #3A9BDC;
-        }
+        .btn-container {
+                position: relative;
+            }
+
+            .popup {
+                position: absolute;
+                top: 50%;
+                left: calc(65%);
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                z-index: 9999;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                white-space: nowrap;
+            }
+
+            .popup.show {
+                opacity: 1;
+            }
+
+            .popup span {
+                font-size: 14px;
+            }
+            .center-image2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .center-image2 img {
+                max-width: 100%;
+                max-height: 100%;
+            }
 </style>
 

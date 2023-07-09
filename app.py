@@ -1,6 +1,5 @@
 # Importing necessary Libraries:
 from flask import Flask, render_template, request
-import ezgmail
 
 # Creating an instance of Flask class
 app = Flask(__name__, template_folder='templates')   
@@ -13,22 +12,7 @@ def home():
 # Creating the Contact Us page:
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    if request.method == 'GET':
-        return render_template('contact.html')
-    else:
-        email_id = request.form.get('email_id')
-        name = request.form.get('name')
-        if request.form.get('recruiter') == 'YES':
-            recruiter = 'He is a Recruiter.'
-        else:
-            recruiter = 'He is not a Recruiter.'
-            message = f"{name} has shown interest in your website.\n\n{recruiter}. \n\n Message : {request.form.get('query')}"
-
-        ezgmail.send('archismansengupta02@gmail.com', "Notification from Portfolio website", message)
-
-        return render_template('contact.html')
-        
-
+    return render_template('contact.html')
 
 # Creating the Projects page:
 @app.route('/projects', methods=['GET', 'POST'])
