@@ -18,6 +18,11 @@ def contact():
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
     return render_template('projects.html')
+
+# Creating the Students.com page:
+@app.route('/students')
+def students():
+    return render_template('students.html')
     
 # Running the Flask App:
 if __name__ == '__main__':

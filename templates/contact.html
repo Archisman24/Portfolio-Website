@@ -25,12 +25,12 @@
                     <div class="col-lg-6 mx-auto my-4 text2" style="margin-top: 10px; width: 90%;">
                         <form id="contactForm">
                             <label for="email" class="form-label my-3 navs">Email Address</label>
-                            <input type="email" id="email" placeholder="my@email.com" class="form-control" name="email_id"/>
+                            <input type="email" id="email" placeholder="my@email.com" class="form-control" name="email_id" required/>
                                 
                             <label for="name" class="form-label my-3 navs">Name</label>
-                            <input type="name" id="name" placeholder="e.g. David" class="form-control" name="name"/>
+                            <input type="name" id="name" placeholder="e.g. David" class="form-control" name="name" required/>
 
-                            <label for="place" class="form-label my-3 navs">Location</label>
+                            <label for="place" class="form-label my-3 navs">Location <text class="text-secondary" style="font-size: 12px ;">(optional)</text></label>
                             <input type="text" id="place" placeholder="e.g. Place" class="form-control" name="place"/>
 
                             <label for="subject" class="form-label my-3 navs">Are you a Recruiter?</label>
@@ -41,8 +41,8 @@
                             <label for="query" class="my-3 navs">Write a Message</label>
                             <textarea id="query" cols="40" rows="10" style="height: 200px; resize: none;" placeholder="Write something here.." class="form-control text1"></textarea>
                             <div class="text-center my-3 btn-container">
-                                <button type="button" class="btn btn-success my-3" onclick="submitForm()" id="submitButton">
-                                    <span>SUBMIT</span>
+                                <button type="button" class="btn btn-success my-3 " onclick="submitForm()" id="submitButton">
+                                    <span class="text2">SUBMIT</span>
                                 </button>
                                 <div class="popup" id="popup">
                                     <span>Message sent!</span>
@@ -70,6 +70,13 @@
                 var query = document.getElementById('query').value;
                 var sendButton = document.getElementById('submitButton');
                 var popup = document.getElementById('popup');
+
+                // Check if required fields are filled
+                if (!email || !name) {
+                    // Show error message and return without form submission
+                    alert('Please fill in all required fields.');
+                    return;
+                }
 
                 // Disable the button and show "SENDING..." text
                 sendButton.disabled = true;
