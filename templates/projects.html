@@ -11,76 +11,80 @@
 </head>
 <body>
     {%include 'nav.html'%}
-    <div class="container" style="padding-top: 20px; ">
-        <div class="text-center" style="max-width: 400px; margin: auto auto; padding: 20px;">
-            <h1 class= " text2" style="font-size: 80px; margin-top: auto;">PROJECTS</h1>
+    <div class="container white-box shadow-lg" style="margin-top: 60px; width: auto; padding: 5% 5%;">
+        <div class="row text-center" style="margin-top: -4%;">
+            <h1 class= " text1 " style="font-size: 400%; ">PROJECTS</h1>
         </div>
-    </div>
-
-    <div class="container white-box shadow-lg" style="margin-top: 40px; width: auto; padding: 5% 5%;">
-        <div class="row">
+        <hr class="hr hr-blurry" />
+        <div class="row gy-4" style="margin-top: 5%; font-size: 90%;">
             <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto;">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem;">
+                    <img src="static\kitting_trolley.jpg" class="card-img-top" alt="Kitting Trolley Image">
+                    <div class="card-body">
+                        <h5 class="card-title" style="margin-bottom: 2%; margin-top: 3%;">Improvement of Kitting Area and Kitting Trolley</h5>
+                        <p class="card-text text1">The objective of this project is to improve the part flow to the kitting area in the assembly line (Vehicle Factory Line 1, Tata Motors, Jamshedpur) and modify the kitting trolley design to better accommodate the different parts used, providing enhanced ergonomics and ease of use.</p>
+                        <a href="/kitting" class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem;">
+                    <img src="static\safety_hel_detect.jpg" class="card-img-top" alt="Helmet Detection image">
+                    <div class="card-body">
+                        <h5 class="card-title" style="margin-bottom: 6%; margin-top: 5%;">Safety Helmet Detection Using YOLO</h5>
+                        <p class="card-text text1">In this project, I have trained a model using YOLOv8 framework to detect safety helmets. Here, we can provide live feed from a webcam from where the model can detect the workers who are not wearing helmets and take their image.</p>
+                        <a href="/safetyhelmetdetection" class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem;">
+                    <img src="static\dimple_effect_aero.png" class="card-img-top" alt="Dimple Effect" style="margin-top: 5%;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="margin-bottom: 5%; margin-top: 5%;">Analysis of Dimple Effect on Passenger Car</h5>
+                        <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
+                        <a href="/dimple_effect" class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+
+        <div class="row gy-4" style="padding-top: 6%; font-size: 90%;">
+            <div class="col-lg-4">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem">
                     <img src="static\students1.jpg" class="card-img-top" alt="Image of Students">
                     <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Students.com</h5>
+                        <h5 class="card-title" style="margin-bottom: 5%; margin-top: -5%;">Students.com</h5>
                         <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
                         <a href="/students" class="btn btn-primary">Visit</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto; min-height:34rem">
-                    <img src="static\quadcopter1.png" class="card-img-top" style="height: 16rem; margin-bottom: 1rem;" alt="Image of Students">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem">
+                    <img src="static\quadcopter.png" class="card-img-top" style="height: 16rem; margin-bottom: 1rem;" alt="Image of Students">
                     <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Multi-Terrain Quadcopter</h5>
-                        <p class="card-text text1" style="min-height: 9rem;">In this project, we will create a modified quadcopter with the capability to both fly and travel on ground.</p>
-                        <a href="/students" class="btn btn-primary" >Visit</a>
+                        <h5 class="card-title" style="margin-bottom: 5%; ">Multi-Terrain Quadcopter</h5>
+                        <p class="card-text text1" style="min-height: 9rem;">In this project, we will create a modified quadcopter with the capability to both fly and travel on ground. This will have increased weight carrying capacity and increases its maneuverability.</p>
+                        <a href="/quadcopter" class="btn btn-primary" >Visit</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto;">
-                    <img src="static\students.jpg" class="card-img-top" alt="Quadcopter Image 1">
+                <div class="card text-center shadow" style="width: auto; min-height:35rem">
+                    <img src="static\foldable_scooter.jpg" class="card-img-top" alt="Image of Students" >
                     <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Students.com</h5>
-                        <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
-                        <a href="/students" class="btn btn-primary">Visit</a>
+                        <h5 class="card-title" style="margin-bottom: 5%; margin-top: 3%; ">Foldable E-Scooter</h5>
+                        <p class="card-text text1">In this project, we are working on an E-scooter to modify and make it foldable to its maximum extent and make it more lightweight. This makes the scooter more portable and easy to use. We have also applied Generative design for further improvements.</p>
+                        <a href="/foldable_scooter" class="btn btn-primary">Visit</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 6%;">
-            <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto;">
-                    <img src="static\students.jpg" class="card-img-top" alt="Image of Students">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Students.com</h5>
-                        <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
-                        <a href="/students" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto;">
-                    <img src="static\students.jpg" class="card-img-top" alt="Image of Students">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Students.com</h5>
-                        <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
-                        <a href="/students" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card text-center shadow" style="width: auto;">
-                    <img src="static\students.jpg" class="card-img-top" alt="Image of Students">
-                    <div class="card-body">
-                        <h5 class="card-title" style="margin-bottom: 5%;">Students.com</h5>
-                        <p class="card-text text1">This is a website to keep records of student details and their scores. This is a basic website that displays information about students. It allows you to search for students, add new student records, and edit existing student information.</p>
-                        <a href="/students" class="btn btn-primary">Visit</a>
-                    </div>
-                </div>
-            </div>
+            </div>            
+            
+            
         </div>
     </div>
     
