@@ -33,6 +33,27 @@ def students():
 def kitting():
     return render_template('kitting.html')
 
+# Creating the Helmet Detection page:
+@app.route('/safetyhelmetdetection')
+def helemet_detection():
+    return render_template('helmet_detection.html')
+
+# Creating the Aerodynamics Project page:
+@app.route('/dimple_effect')
+def dimple_effect():
+    return render_template('dimple_effect.html')
+
+# Creating the Quadcopter Project page:
+@app.route('/quadcopter')
+def quadcopter():
+    return render_template('quadcopter.html')
+
+# Creating the Kitting Project page:
+@app.route('/foldable_scooter')
+def foldable_scooter():
+    return render_template('foldable_scooter.html')
+
+
 ## Pages related to Blog Page:
 
 

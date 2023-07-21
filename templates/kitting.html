@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="static/AS_Favicon.ico">
+    <title>Kitting Area and Trolley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    {%include 'styles.html'%}
+</head>
+<body>
+    {%include 'nav.html'%}
+    <div class="container white-box shadow-lg " style="margin-top: 60px; width: auto; padding: 5% 5%;">
+        <h1 class="text2 " style="font-size: 220%; font-weight: 500; margin-top: -2%; margin-bottom: 3%;">
+            <center>
+                IMPROVEMENT OF KITTING AREA AND KITTING TROLLEY
+                <a href="https://drive.google.com/file/d/1Sj9Xz8obu1x_k7W2hwCjCcnY3U11pLp4/view?usp=drive_link" target="_blank" download>
+                    <img src="static\file_download.png" alt="Download Report as Pdf" style="max-width: 2%; margin-left: 5%;">
+                </a>
+            </center> 
+            
+        </h1>
+        <hr class="hr hr-blurry" />
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <p style="margin-top: 5%;" >
+                <h3 class="text2" style="font-size: 150%; font-weight: 500;"> ABSTRACT </h3>
+                <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;">
+                    <centre>
+                        With the increasing complexity and high product variability in the manufacturing systems, assembly lines have become more and more complex in terms of complexity and storage space requirements. Also, with the introduction of the new emission norms, i.e.  Phase 2 of the BS6 emission norms (also called RDE) from April 2023 in India, every carmaker must upgrade their engines which has resulted in the change in designs of the existing parts. This has caused several storage and other handling related issues, rooting from the need to maintain larger inventories against limited storage spaces. This issue can be addressed by the introduction of Kitting system in the assembly line. Kitting can provide better control and flow of the WIP inventory without overcrowding the assembly line. The Kitting trolley used in this area needs to accommodate all the parts required along with providing improved ergonomics and ease of movement to the production workers. The objective of this project is to improve the part flow to the kitting area in the assembly line (Vehicle Factory Line 1, Tata Motors, Jamshedpur) and modify the kitting trolley design to better accommodate the different parts used, providing enhanced ergonomics and ease of use. 
+                    </centre>
+                </p>
+        </div>
+        <div class="container text1" style="margin-top: 1%; line-height: 2; margin-left: -1%;">
+            <div class="row gy-2" style="padding-left: 2%; padding-right: 5%;">
+                <div class="col-lg-7" style="padding-right: 5%;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 500;"> PROJECT OVERVIEW </h3>
+                    <p class="text2" style="margin-top: 6%; line-height: 2;">
+                        <centre>
+                            Tata Motors Limited as one of its first manufacturing facility at Jamshedpur, which is one of the largest automobile manufacturing units of the world. In this plant, out of the many in-house factories, we have worked in the Vehicle Factory (for Line 1 and 2). Out of this, we would be working on the Assembly line 1, on the following VCs: 51665168000R, 51816168100R, 51660868000R, 51686168000R, 51770168000R, 51780168000R, 52076168100R, 51620568000R, 51816156100R, 51686156000R.   I was very fortunate to work under Mr. Rakesh Kumar (DGM, Manufacturing Head, Vehicle Factory, Assembly Line 1), Mr. Amitesh Kumar (DGM, Vehicle Factory Line 1, Jamshedpur), Mr. Anirban Bandyopadhyay (Team Lead, TTL) and others. I am very grateful for their constant support and guidance.
+                        </centre>
+                    </p>
+                </div>
+                <div class="col-lg-5 " style="margin-top: 5%; margin-bottom: 3%;">
+                    <div class="d-flex justify-content-center"> 
+                        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="static\tmlj1.jpg" class="d-block w-100" style="max-width: 400px; max-height: 300px;" alt="Tata Motors Jamshedpur Plant">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="static\tmlj2.jpg" class="d-block w-100" style="max-width: 400px; height: 260px; max-height: 300px;" alt="Vehicle Factory Line 1, TML">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="row gy-2">
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 8%;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 500; margin-top: 2%;"> PROJECT REQUIREMENT </h3>
+                    <p class="text2" style="margin-top: 1% ; line-height: 2.5;">
+                        <centre>
+                            <li>With the ever-increasing complexity of the vehicles, less accurate demand forecasts, larger inventory, and material inventory requirements, better and faster handling of parts to the assembly line has become very crucial. In the automobile industry, kitting is practiced as a method of materials feeding to the assembly line among others such as continuous supply, batching and sequencing. Kitting involves transferring the required parts from a temporary storage area, near the assembly line, using dedicated trolleys. This storage area, also known as the Kitting area, is placed as close as possible to the assembly line to make it easier and faster for the operators to the take the assembly parts to their required location. Kitting process reduces the time taken by the operators to take the parts to the assembly line thus reducing the assembly time, increasing productivity. It also reduces quality issues, as parts are checked twice, once before loading to the kitting trolley and again at the assembly line.</li>
+                            <li>After KAIZEN in September 2021, the Kitting concept was implemented in the Assembly line 1 and dedicated Kitting areas and trolleys were designed for it. The Kitting area was divided into 2 parts, Kitting Area 1 and Kitting Area 2, depending upon the proximity of the stations where the parts are required.</li>
+                            <li>Kitting area supply management can also be improved that would further improve the efficiency of the assembly line. Lack of proper storage and supply of some parts in the Kitting area leads to damage of those parts. So, some of the storage racks needs to be modified.</li> 
+                            <li>After the BSVI Phase 2, the requirements related to the parts have changed, for example, the shape and size of some of the assembly parts, from the kitting area, have changed which now cannot be effectively accommodated in the kitting trolley. Also, kitting trolley design can be further modified to better meet the requirements of the users. The Kitting trolley should also be able to accommodate smaller parts, like brackets and clamps, to prevent wrong part fitment and unnecessary wastage. The Kitting trolley design also needs to be modified to make them more lightweight and easier to use.</li>
+                        </centre>
+                    </p>
+                </div>
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 500;"> CHALLENGES AND DIFFICULTIES </h3>
+                    <p class="text2" style="margin-top: 3% ; line-height: 2.5;">
+                        <centre>
+                                Few of the challenges that were faced in this project are mentioned below:<br>
+                                - Keeping track off the large number of parts (nearly 300 parts) that are stored in the kitting area/trolley,<br>
+                                - Reducing the weight of the trolley provided so that it can accommodate all the required parts effectively, <br>
+                                - Deciding the loading and unloading process into the trolley as per ergonomic standards, LIFO strategy, CG of trolley, etc.,<br>
+                                - Reducing the time taken by the user to load a trolley by deciding the shortest path to be followed inside the kitting area, during loading,<br>
+                                - No Cardex was available for the existing vehicles, which made it difficult to identify the parts going in for a vehicle of a particular VC,<br>
+                                - Modifying the layout of the Kitting Area based on LIFO method used in the Kitting trolley,<br>
+                                - Reducing the unnecessary wastage and damage to the parts stored in the Kitting area,<br>
+                        </centre>
+                    </p>
+                </div>
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 500;"> STAKEHOLDERS </h3>
+                    <p class="text2" style="margin-top: 1% ; line-height: 2.5;">
+                        <centre>
+                                The stakeholders of this project would be:<br>
+                                - Kitting Area Operators,<br>
+                                - Kitting Area Suppliers / Vendors, <br>
+                                - Assembly Line Operators,<br>
+                        </centre>
+                    </p>
+                </div>
+                <div class="row gy-3 " style="padding-left: 2%; padding-right: 5%;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 500;"> PROPOSED IDEAS </h3>
+                    <p class="text2" style="margin-top: -1% ; line-height: 2.5;">
+                        <centre>
+                        <dl>
+                                <dt style="font-weight: 200;">The ideas proposed are as follows:</dl>
+                            <dd>- To keep track of all the large number of parts that are used in the different VCs, a Part list needs to be made. This would have records of all the parts present in the Kitting area as well as the quantity of the different parts used in the different VCs,</dd>
+                            <dd>- To reduce the weight of the Kitting trolleys, we can remove the racks present in the trolleys that are not used while carrying the parts. These racks can also be replaced with rod racks that ultimately reduce the weights of the trolley, </dd>
+                            <dd>- New hangers and hooks can be introduced on the Kitting trolley to make loading and unloading of parts easier,</dd>
+                            <dd>- The placement of all the parts used in a vehicle needs to be predetermined to ensure efficient utilisation of the space, also keeping in mind the ergonomic factors for the users. The heavy parts should be placed on the upper racks and some of the other parts can also be hanged on the trolley, to provide easy loading and unloading to/from the trolley. </dd>
+                            <dd>- The shortest path inside the kitting area needs to be decided based on the LIFO strategy for the parts required in a vehicle. The location on the parts kept inside the Kitting area also needs to be changed based on this strategy.</dd>
+                            <dd>- DSL strategy can be used for some parts, like parts that are used in sufficiently larger quantity in a vehicle, are uniquely shaped or are very heavy (like APUs, Axles, etc.), can be directly supplied to the Kitting area or the Assembly line to increase productivity of the assembly line by saving both time and resources required to move it from other intermediate storage locations. </dd>
+                            <dd>- Cardex for the different VCs going in the Assembly Line 1, also need to be made,</dd>
+                        
+                        </dl>
+                            </centre>
+                    </p>
+                </div>
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                    <h2 class="text2" style="font-size: 200%; font-weight: 500; margin-bottom: 2%;"> KITTING TROLLEY MODIFICATIONS </h2>
+                    <hr class="hr hr-blurry" style="width: 50%; margin-top: -1%;"/>
+                    <h5 class="text2" style="font-size: 150%; font-weight: 400; margin-bottom: 1%;"> INTRODUCTION</h5>
+                    <p class="text2" style="margin-top: 2% ; line-height: 2.5;">
+                        <centre>
+                            Kitting trolley can be used as it is a mobile storage unit equipped with shelves or compartment designed to hold and organize material, tool, or component for efficient assembly or production processes. Kitting trolley has undergone significant modification to enhance its efficiency and usability. By carefully removing the unnecessary components, the trolley has been made light weight, allowing for easy manoeuvrability and reduce strain on operator. 
+                            Furthermore, and a meticulous arrangement has been incorporated, providing space for different parts. 
+                            This enhanced organization ensures that each component has its own dedicated spot, minimizing the time spent searching for items during the kitting process. The improvement lightweight deign and structure layout of the trolley maximize productivity, allowing for smoother and more effective assembly operations.<br>
+                        </centre>
+                    </p>
+                </div>
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                    <h5 class="text2" style="font-size: 150%; font-weight: 400; margin-bottom: 1%;"> EXISTING ISSUES</h5>
+                    <p class="text2" style="margin-top: 2% ; line-height: 2.5;">
+                        <centre>
+                            -	The trolley racks are being underutilised. Many of the racks remain empty after they are fed into the assembly line.<br>
+                            -	Heavier parts are placed on the lower racks of the trolley. This is not in accordance with the ergonomic standards and can affect the human well-being, safety, and health of the operators,<br>
+                            -	Mismanagement in placing the parts on the kitting trolley,<br>
+                            -	No arrangements are made to hang the brake pipes on the trolleys,<br>
+                        </centre>
+                    </p>
+                </div>
+                <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                    <div class="col-lg-7" style="margin-right: 5%;">
+                        <h5 class="text2" style="font-size: 150%; font-weight: 400; margin-bottom: 1%;"> GUIDLINES FOLLOWED</h5>
+                        <p class="text2" style="margin-top: 3% ; line-height: 2.6;">
+                            <centre>
+                                The Kitting Trolley has been designed as per the Ergonomic Guidelines for Manually Handled Trolleys.
+                                Some of the standard guidelines are as follow. <br>
+                                -   The Maximum Height of the trolley should not exceed 1400 mm.<br>
+                                -	A shelf height of:
+                                <li>1100 to 1400 mm (elbow to shoulder) for infrequently use and light items.</li>
+                                <li>800 to 1100 mm (knuckle to elbow) for frequent use and heavy items.</li>
+                                <li>600 to 800 mm (knee to knuckle) for less frequent use.</li>
+
+                            </centre>
+                        </p>
+                    </div>
+                    <div class="col-lg-2" style="margin-top: 2%; ">
+                        <div class="d-flex justify-content-center">
+                            <img src="static\tmlj3.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="margin-top: 2%; margin-left: 3%;">
+                        <div class="d-flex justify-content-right">
+                            <img src="static\tmlj4.jpg">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row gy-3" style="padding-left: 2%; padding-right: 5%;">
+                        <h5 class="text2" style="font-size: 150%; font-weight: 400; margin-bottom: 1%;"> DESIGN HIGHLIGHTS</h5>
+                        <p class="text2" style="margin-top: 2% ; line-height: 2.5;">
+                            <centre>
+                                -	Trolley shelves height are optimized as per the standards.<br>
+                                -	Heavier Objects are placed in the zone of 800mm to 1100 mm shelf for ergonomics access for the operators.<br>
+                                -	The Height of the trolley handles is optimized to 950mm to reduce the effort required during manual handling.<br>
+                                -	New arrangement has been designed for APU unit in order to avoid shaking during the trolley movements,<br>
+                                <li>Hooks are introduced for relay valves,</li>
+                                <li>Heavy parts like Relay Arm, Relay Arm Mounting Bracket, APU, etc. are placed on upper rack,</li>
+                                <li>Extra supports provided to hang the Base plates,</li>
+                                <li>The Lower racks are replaced with lightweight rod racks,</li>
+                                <li>Extra holders provided for brake pipes.</li>
+
+                            </centre>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div style="height: 50px;"></div>
+    {%include 'footer.html'%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
