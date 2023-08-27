@@ -9,19 +9,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     {%include 'styles.html'%}
 </head>
+<style>
+    a {
+  text-decoration: none;
+    }
+</style>
 <body>
     {%include 'nav.html'%}
     <div class="container white-box shadow-lg " style="margin-top: 60px; width: auto; padding: 5% 5%;">
         <h1 class="text2 " style="font-size: 220%; font-weight: 500; margin-top: -2%; margin-bottom: 3%;">
             <center>
-                SAFETY HELMET DETECTION - USING YOLO
+                SAFETY HELMET DETECTION - USING YOLOv8
             </center> 
         </h1>
         <hr class="hr hr-blurry" />
         <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
             <p style="margin-top: 5%;" >
-                <h3 class="text2" style="font-size: 150%; font-weight: 500;"> ABSTRACT </h3>
-                <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;">
+                <h3 class="text2" style="font-size: 150%; font-weight: 600;"> ABSTRACT </h3>
+                <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;text-align: justify;">
                     <centre>
                         In industrial and construction settings, ensuring the safety of workers is paramount. Accidents and injuries can be significantly reduced by enforcing the usage of safety helmets. This project focuses on developing a safety helmet detection system using the YOLOv8 (You Only Look Once version 8) deep learning model. 
                         YOLOv8 is a state-of-the-art object detection algorithm known for its efficiency and accuracy in real-time applications.
@@ -32,15 +37,138 @@
         <div class="container text1" style="margin-top: 1%; line-height: 2; margin-left: -1%;">
             <div class="row gy-2" style="padding-left: 2%; padding-right: 5%;">
                 <div class="col-lg-7" style="padding-right: 5%;">
-                    <h3 class="text2" style="font-size: 150%; font-weight: 500;"> INTRODUCTION </h3>
-                    <p class="text2" style="margin-top: 6%; line-height: 2;">
+                    <h3 class="text2" style="font-size: 150%; font-weight: 600;"> INTRODUCTION </h3>
+                    <p class="text2" style="margin-top: 6%; line-height: 2;text-align: justify;">
                         <centre>
-                            
+                            In the era of Industry 4.0, characterized by the convergence of cutting-edge technologies, the paramount importance of workplace safety cannot be overstated. Safety Helmet Detection emerges as a pioneering application of Industry 4.0 principles, serving as a bridge between technological innovation and the well-being of the workforce.
+                            In many manufacturing and automotive industrial facilities, the use of safety helmets or hard hats is not just a policy but a critical necessity. However, for various reasons, some workers may occasionally neglect to wear their helmets, posing a significant risk of severe consequences in the event of an accident.
+                            The primary objective of this project is to identify individuals who are not adhering to safety regulations, utilizing live camera feeds, and subsequently compiling a comprehensive collection of images of the workers who are not wearing their safety helmet.
+
                         </centre>
                     </p>
                 </div>
+                <div class="col-lg-5 d-flex justify-content-between align-items-center">
+                    <div style="position: relative; width: 100%; min-height: 0; padding-bottom: 56.25%;">
+                        <video style="position: absolute; width: 110%; height: 110%;" controls autoplay>
+                            <source src="static\sample_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                
+                
             </div>
-        </div>   
+        </div>
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <p style="margin-top: 5%;" >
+                <h3 class="text2" style="font-size: 150%; font-weight: 600;"> THE MODEL </h3>
+                <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;text-align: justify;">
+                    <centre>
+                        YOLOv8 is the new state-of-the-art computer vision model built by Ultralytics, the creators of YOLOv5.
+                        YOLOv8 claims to be faster, precise for better object detection, image segmentation and classification. Technically speaking, YOLOv8 is a group of convolutional neural network models, created and trained using the PyTorch framework. 
+                        YOLOv8 offers various model sizes to cater to different deployment scenarios. These models include YOLOv8n, YOLOv8s, YOLOv8m, YOLOv8l, and YOLOv8x.
+                    </centre>
+                </p>
+        </div>
+        <div class="row gy-2 justify-content-center" style="padding-left: 2%; padding-right: 8%;">
+            <img src="static\yv8data.jpg" class="mx-auto" style="width: 70%; height: 70%;" alt="Various YOLOv8 models">
+        </div>
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;text-align: justify;">
+                <centre>
+                    The image below illustrates the comparision between different YOLOv8 models and showing the trade-offs between speed and accuracy of the different models. 
+                </centre>
+            </p>
+        </div>
+        <div class="row gy-2 justify-content-center" style="padding-left: 2%; padding-right: 8%;">
+            <img src="static\yv8data2.jpg" class="mx-auto" style="width: 80%; height: 80%;" alt="Comparision of different models">
+        </div>
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 5%;text-align: justify;">
+                <centre>
+                    For this project, I have used YOLOv8n model as the base model to train on my custom dataset. The model has been trained on a dataset of nearly 21k images and can locate the faces of the people on a frame and classify them into the categories of “Helmet” and “No Helmet”.
+                </centre>
+            </p>
+        </div>
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <p >
+                <h3 class="text2" style="font-size: 150%; font-weight: 600;"> THE DATASET </h3>
+                <p class="text2" style="margin-top: 3%; line-height: 2; margin-bottom: 1%;text-align: justify;">
+                    <centre>
+                        The dataset used to train the model is very important in determining the overall accuracy and speed of the model. A crucial factor is the adequate representation of each class to be detected and meticulous annotations of these classes within the images. 
+                        A high-quality dataset forms the bedrock of a robust model. However, getting a proper image classification dataset is a challenge. Having a large collection of images is not the only requirement as all the images needs to be correctly annotated so that our model can learn properly on it.
+                        To make a detector that works well for the different environments, the images of this dataset must be taken from many diverse locations and under different lighting conditions. This helps our model to learn patterns that generalize well, contrary to characteristics unique to a particular scene.
+                    </centre>
+                </p>
+                <p class="text2" style=" line-height: 2; margin-bottom:2%;text-align: justify;">
+                    <centre>
+                        Fortunately, there are a large number of public datasets available with proper annotations that was used for our model. "The datasets utilized already contain predefined classes such as 'Helmet', 'Head', 'Person', and 'No Helmet'. However, these categories have been reduced into a more concise set of three classes: <b>'Helmet'</b>, <b>'No Helmet'</b>, and <b>'Worker'</b>. The datasets used for this project are 
+                        <a href="https://www.kaggle.com/datasets/andrewmvd/hard-hat-detection" >Safety Helmet Detection</a> and <a href="https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset" >Safety-Helmet-Wearing-Dataset</a>. On these datasets, I performed some basic augmentations in the images, changed the annotations from XML to YOLO format, changed various labels, etc to create the final dataset.
+                        The final dataset used for this model can be used at <a href="https://www.kaggle.com/datasets/archisman24/new-dataset">Safety Helmet Detection Dataset</a>. 
+                    </centre>
+                </p>
+                
+        </div>
+        <div class="row gy-2 justify-content-center" style="padding-left: 2%; padding-right: 8%;">
+            <div class="col-lg-7">
+                <p class="text2" style=" line-height: 2;text-align: justify;">
+                    <centre>
+                        Upon analyzing the provided plot, it becomes evident that while the 'Helmet' class exhibits adequate representation, the 'No Helmet' and 'Worker' classes suffer from a scarcity of instances, resulting in their under-representation. This presents a clear opportunity for enhancement, as a more balanced representation of all classes can lead to the development of a significantly improved model.
+                    </centre>
+                </p>
+            </div>
+            <div class="col-lg-5 d-flex justify-content-center">
+                <img src="static\instances.jpg" class="mx-auto" style="width: 90%; height: 90%;" alt="Instances in Dataset">
+            </div>
+        </div>
+        <div class="row gy-2" style="padding-left: 2%; padding-right: 8%;">
+            <h3 class="text2" style="font-size: 150%; font-weight: 600;"> THE RESULT </h3>
+            <p class="text2" style="line-height: 2; margin-bottom: 1%;text-align: justify;">
+                <centre>
+                    To train our YOLOv8 model on the image dataset, different training sessions across varying epochs were conducted and the outcomes were compared. Specifically, we trained the model across three different epochs: 30, 50, and 100. Upon successful training of the model, YOLOv8 creates various plots and figures to 
+                    evaluate the model performance. Some of them are discussed below and finally the best model is selected.
+                </centre>
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">TRAIN BOX LOSS</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The train box loss metric measures the difference between the predicted bounding boxes and the actual bounding boxes of the objects in the training data. A lower box loss means that the model's predicted bounding boxes more closely align with the actual bounding boxes. 
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">TRAIN CLASS LOSS</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The train class loss metric measures the difference between the predicted class probabilities and the actual class labels of the objects in the training data. A lower class loss means that the model's predicted class probabilities more closely align with the actual class labels.            
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">TRAIN DFL LOSS</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The train DFL (Dynamic Feature Learning) loss metric measures the difference between the predicted feature maps and the actual feature maps of the objects in the training data. A lower DFL loss means that the model's predicted feature maps more closely align with the actual feature maps.
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">METRICS PRECISION</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The metrics precision (B) metric measures the proportion of true positive detections among all the predicted bounding boxes. A higher precision means that the model is better at correctly identifying true positive detections and minimizing false positives.
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">METRICS RECALL</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The metrics recall (B) metric measures the proportion of true positive detections among all the actual bounding boxes. A higher recall means that the model is better at correctly identifying all true positive detections and minimizing false negatives.
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">METRICS mAP50 (B)</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The metrics mAP50 (B) metric measures the mean average precision of the model across different object categories, with a 50% intersection-over-union (IoU) threshold. A higher mAP50 means that the model is better at accurately detecting and localizing objects across different categories.
+            </p>
+            <li style="font-size: 1rem; font-weight: 500;">METRICS mAP50-95 (B))</li>
+            <p class="text2" style="line-height: 2;margin-top: 2%; margin-bottom: 1%;text-align: justify;">
+                The metrics mAP50-95 (B) metric measures the mean average precision of the model across different object categories, with IoU thresholds ranging from 50% to 95%. A higher mAP50-95 means that the model is better at accurately detecting and localizing objects across different categories with a wider range of IoU thresholds.
+            </p>
+            <div class="row justify-content-center" style="padding-left: 5%; padding-left: 5%;">
+                <div class="col-lg-6 d-flex justify-content-center" style="padding-right: 5%;">
+                    <img src="static\results_30.jpeg" style="max-width: 110%; max-height: 110%;" alt="Results for 30 epochs">
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center" style="padding-left: 5%;">
+                    <img src="static\results_50.jpeg" style="max-width: 110%; max-height: 110%;" alt="Results for 50 epochs">
+                </div>
+                <div class="col-lg-12 d-flex justify-content-center" style="padding-left: 5%; padding-top: 2%;">
+                    <img src="static\results_100.jpeg" style="max-width: 80%; max-height: 80%;" alt="Results for 100 epochs">
+                </div>
+            </div>
+                        
+        </div>
     </div>
     <div style="height: 50px;"></div>
     {%include 'footer.html'%}
