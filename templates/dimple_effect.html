@@ -66,10 +66,56 @@
                 <p class="text2" style="margin-top: 4%; line-height: 2; margin-bottom: 1%; text-align: justify;">
                     <centre class="align-content-center">
                         <l1 class="text2" style="font-size: 130%;">1. DIMPLE EFFECT : </l1>
+                        <p class="text2" style="margin-top: 1%; line-height: 2; margin-bottom: 1%; margin-left: 2%; text-align: justify;">
+                            Have you ever looked at the dimples present on the surface of a typical golf ball. Do you know why they have them?<br>
+                            Actually, golf balls have dimples to reduced air resistance or aerodynamic drag. Reducing the aerodynamic drag allows them to move further when hit and maintain a fixed trajectory during its flight. When the flowing air comes in contact of the golf ball, it becomes detached. This is because the air closest to the surface does not want to stick to the surface of the ball,
+                            it wants to stick to the fast moving air flow. 
+                        </p>
+                        <div style="text-align: center; padding-left: 5%; padding-top: 5%; ">
+                            <a href="https://www.fenixxcell.com/how-many-dimples-on-a-golf-ball/">
+                                <img src="static\gb_dimples.webp" alt="Golf Ball Dimples" style="max-width: 40%;">
+                            </a>
+                        </div>  
                     </centre>
                 </p>
             </p>
-        </div>        
+            <p class="text2" style="padding-top: 1%; line-height: 2; margin-bottom: 1%; margin-left: 2%; text-align: justify;">
+                This layer of air closest to the surface is called a boundary layer. This boundary layer seperates from the surface due to an change in the pressure gradient near the surface. As the air passes over the surface of the sphere it is initially accelerating. This accelerating flow decreases the pressure in the direction of flow. 
+                This is called a Favourable Pressure Gradient. Beyond a certain point, the flow starts to decelerate, which increases the pressure along the direction of flow. This is known as the Adverse Pressure Gradient. If the pressure increase near the surface becomes large enough, the flow will try to reverse its direction. Since, it cannot do that, it will detach itself from the surface of the sphere and will thus create a flow seperation. 
+            </p>
+            <div style="text-align: center; padding-left: 5%; padding-top: 5%; ">
+                <img src="static\aero_ball.png" alt="Golf Ball Dimples" style="max-width: 40%;">
+            </div> 
+            <p class="text2" style="padding-top: 5%; line-height: 2; margin-bottom: 1%; margin-left: 2%; text-align: justify;">
+                This flow seperation causes Pressure Drag on the sphere. This drag happens when there is a seperation of flow near the surface of a body creating a wake region of recirculating flow. Since the wake region is an area of low pressure and since the pressure at the front, ie. where the flow meets the body for the first time, is higher so
+                it creates a pressure difference, thus creating the drag force. Flow seperation can also create vortex shedding that can cause unwanted vibrations and instability to the flow.
+            </p>
+            <p class="text2" style="padding-top: 1%; line-height: 2; margin-bottom: 1%; margin-left: 2%; text-align: justify;">
+                Now, in case of a smooth sphere, the flow separation usually occurs at an angle of 80°. However, in case the boundary layer is turbulent rather than laminar, it is better able to keep itself attached to the surface of the sphere and flow seperation is delayed till around an angle of 120°.
+                This is beacuse turbulence introduces a lot of intermixing between the different layer of flow and this momentum transfer helps it sustaing a larger adverse pressure gradient without seperating. This turbulence effect is achieved with the dimples that delays the flow seperation, creating a smaller wake region, thus ultimately reducing drag.
+            </p>
+        </div>  
+        <div class="row gy-2" style="padding-left: 2%; padding-top: 5%;">
+            <l1 class="text2" style="font-size: 130%;">2. GOVERNING EQUATIONS  : </l1>
+                <p class="text2" style="margin-top: 4%; line-height: 2; text-align: justify; margin-left: 2%;">
+                    The formula used to calculate the drag coefficient (C<sub>d</sub>) is given below:
+                    <center style="font-size: 2rem;">
+                        <blockquote>
+                            <p>C<sub>d</sub> = F<sub>d</sub> / (0.5ρu<sup>2</sup> A)</p>
+                        </blockquote>
+                    </center>
+                    <br>
+                    <ul class="text2" style="padding-left: 5%;">
+                        Where:
+                        <div style="padding-bottom: 1%;"></div>
+                        <li>F<sub>d</sub> = Drag Force, N</li>
+                        <li>ρ = Density of air, kg/m<sup>3</sup></li>
+                        <li>u = Flow speed of object (in simulation, u is the flow speed of air)</li>
+                        <li>A = Frontal Area, m<sup>2</sup></li>
+                    </ul>
+                </p>
+                </p>
+        </div>      
     </div>
     <div style="height: 50px;"></div>
     {%include 'footer.html'%}
